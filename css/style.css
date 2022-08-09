@@ -1,1 +1,134 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.header__wrapper {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.header__container {
+  margin: 15px 25px;
+}
+.header__body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+}
+.header__main {
+  display: flex;
+  align-items: center;
+  flex: 0 0 40%;
+}
+.header__logo {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.header__menu {
+  margin-left: 20px;
+}
+.menu {
+  flex: 0 1 100%;
+}
+@media (min-width: 768px) {
+  .menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+  }
+}
+.menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+@media (any-hover: hover) {
+  .menu__item:hover .menu__sub-list {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu__item:hover .menu__arrow {
+    transform: rotate(-180deg);
+  }
+  .menu__item:hover .menu__arrow,
+.menu__item:hover .menu__link {
+    color: #caf0ca;
+  }
+}
+@media (min-width: 768px) {
+  .menu__item._hover .menu__sub-list {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu__item._hover .menu__arrow {
+    transform: rotate(-180deg);
+  }
+  .menu__item._hover .menu__arrow,
+.menu__item._hover .menu__link {
+    color: #caf0ca;
+  }
+}
+.menu__link {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  transition: color 0.3s ease 0s;
+}
+.menu__arrow {
+  border: none;
+  background-color: transparent;
+  margin-left: 8px;
+}
+.menu__sub-list {
+  position: relative;
+  background-color: #caf0ca;
+  padding: 15px;
+  flex: 1 1 100%;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .menu__sub-list {
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    transform: translate(0px, 10px);
+    visibility: hidden;
+    min-width: 100%;
+    left: 0;
+    position: absolute;
+    top: 100%;
+  }
+}
+.menu__sub-link {
+  text-decoration: none;
+  color: white;
+}
+
+.search-form__icon {
+  display: none;
+}
+.search-form__item {
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.search-form__btn {
+  flex: 0 0 45px;
+  border: none;
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */
