@@ -4,6 +4,7 @@
     
      body {
         background-color: beige;
+        margin: 0;
      }
     
      $color:  #caf0ca;
@@ -231,7 +232,7 @@
     
         &__item {
             width:400px;
-            background-color: white;
+            background-color: rgb(249, 249, 240);
             display: flex;
             align-items: center;
             @media (max-width: 992px) {
@@ -249,7 +250,7 @@
         &__btn {
             
             border: none;
-            background-color: white;  
+            background-color: rgb(249, 249, 240);
             
         }
     
@@ -260,6 +261,7 @@
             color: darkgray;
             padding: 8px 0;
             width: 100%;
+            background-color: rgb(249, 249, 240);
     
             
             
@@ -357,5 +359,48 @@
                     }
                 }
             }
+        }
+    }
+
+    .banner {
+        width: 100%;
+        border: 1px solid black;
+        height:300px;
+    }
+
+    .categories {
+
+        &__wrapper {
+            margin: 20px 100px;
+            
+            &-icons {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+
+                &__item {
+                    flex: 0 1 auto;
+                    position: relative;
+                    align-items: center;
+                    background-color: rgb(170, 170, 136);
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+
+                    .icon {
+                        position: absolute;
+                        top: 10px;
+                        left: 15px;
+                        font-size: 28px;
+                        cursor: pointer;
+                        
+                    }
+                }
+
+               
+
+            }
+
         }
     }
