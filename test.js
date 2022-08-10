@@ -18,3 +18,10 @@ window.onload = function () {
         } 
     }
 }
+
+function toggleMobileMenu() {
+    let btn = document.querySelector('.icon-menu');
+    let menu = document.querySelector('.menu__body');
+    btn.classList.toggle('activated');
+    menu.classList.toggle('activated');
+  }
