@@ -8,6 +8,7 @@
      }
     
      $color:  #caf0ca;
+     $color_2: rgb(249, 249, 239);
     
     .header {
         background-color: beige;
@@ -369,9 +370,13 @@
     }
 
     .categories {
+        margin: 20px 100px;
+        background-color: $color_2;
 
         &__wrapper {
-            margin: 20px 100px;
+            padding: 30px 15px ;
+            
+            
             
             &-icons {
                 list-style: none;

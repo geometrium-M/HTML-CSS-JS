@@ -286,8 +286,12 @@ body {
   height: 300px;
 }
 
-.categories__wrapper {
+.categories {
   margin: 20px 100px;
+  background-color: rgb(249, 249, 239);
+}
+.categories__wrapper {
+  padding: 30px 15px;
 }
 .categories__wrapper-icons {
   list-style: none;
