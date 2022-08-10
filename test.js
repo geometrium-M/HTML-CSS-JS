@@ -2,7 +2,6 @@
 window.onload = function () {
     document.addEventListener("click", OpenMenu);
 
-    
     function OpenMenu(e) {
         const targetElement = e.target;
         if (targetElement.classList.contains('menu__arrow')) {
@@ -25,3 +24,28 @@ function toggleMobileMenu() {
     btn.classList.toggle('activated');
     menu.classList.toggle('activated');
   }
+
+
+  async function getResponse() {
+    let response = await fetch('http://localhost:3445/users')
+    let content = await response.json()
+    let res = await content.sort((a,b ) => { return b.timestamp - a.timestamp})
+   console.log(res)
+
+    
+
+    let list = document.querySelector('.posts')
+    
+    for(let key in content) {
+        
+        list.innerHTML += `
+        <li class="post">
+        <div>${content[key].id}</div>
+        <div>${content[key].name}</div>
+        <div>${content[key].location}</div>
+        </li>`
+    }  
+}
+
+
+getResponse()
