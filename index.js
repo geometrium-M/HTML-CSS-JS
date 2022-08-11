@@ -1,3 +1,4 @@
+const { default: Swiper } = require("swiper");
 
 window.onload = function () {
     document.addEventListener("click", OpenMenu);
@@ -23,30 +24,66 @@ function toggleMobileMenu() {
     let menu = document.querySelector('.menu__body');
     btn.classList.toggle('activated');
     menu.classList.toggle('activated');
-  }
+}
 
 
-  async function getResponse() {
+async function getIcons() {
     let response = await fetch('http://localhost:3000/icons')
     let content = await response.json()
-    
-
+    console.log(content)
     
 
     let list = document.querySelector('._icons')
-    
+
     for(let key in content) {
         
         list.innerHTML += `
         
-        <li class="item">
+        <li class="item swiper-slide">
             <a href="">
-                <img src="${content[key].logo}" alt="" class="icon">
+                <img src="${content[key].image}" alt="" class="icon">
             </a>
-            <div class="title">${content[key].name}</div>
+            <div class="title">${content[key].title}</div>
         </li>`
     }  
 }
+getIcons()
+
+async function getItems() {
+    let response = await fetch('http://localhost:3000/items')
+    let content = await response.json()
+    let result = await content.sort((item1, item2) => item2.date -item1.date).slice(0,5);
+    console.log(result)
+    
+
+    let list = document.querySelector('.container')
+
+    for(let key in result) {
+        
+        list.innerHTML += `
+        
+        <article class="item">
+                    <a href="">
+                        <img src="${content[key].logo}" alt="" class="item-logo">
+                    </a>
+                    <div>${content[key].name}</div>
+                    <div>${content[key].price}</div>
+        </article>`
+    }  
+}
+getItems()
 
 
-getResponse()
+const swiper = new Swiper
+
+
+
+
+
+
+
+
+
+
+
+
