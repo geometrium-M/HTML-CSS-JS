@@ -364,48 +364,110 @@
     }
 
     .banner {
+        
         width: 100%;
         border: 1px solid black;
         height:300px;
     }
 
     .categories {
-        margin: 20px 100px;
+        margin: 20px 30px;
         background-color: $color_2;
 
         &__wrapper {
-            padding: 30px 15px ;
-            
-            
-            
-            &-icons {
-                list-style: none;
+            padding: 20px 15px;
+
+            &._icons{
                 display: flex;
                 justify-content: space-between;
-                padding: 0;
+                list-style: none;
 
-                &__item {
-                    flex: 0 1 auto;
-                    position: relative;
-                    align-items: center;
-                    background-color: rgb(170, 170, 136);
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 50%;
 
-                    .icon {
-                        position: absolute;
-                        top: 10px;
-                        left: 15px;
-                        font-size: 28px;
-                        cursor: pointer;
-                        
-                    }
-                }
+            .item {
+                display: flex;
+                flex-direction: column;
+                    
+            }
 
+            a{
+                flex: 0 1 auto;
+                position: relative;;
+                background-color: rgb(170, 170, 136);
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
                
+            }
+                   
+
+            .icon {
+                position: absolute;
+                top:25%;
+                left: 25%;
+                width: 40px;
+                
+                
+                        
+            }
+
+            .title {
+                text-align: center;
+                padding-top: 5px;
+               
+                
 
             }
 
+                
+
         }
+
+
     }
+
+        
+
+
+
+        
+
+    
+    }
+
+    
+
+
+    /*&._wrapper {
+        padding: 30px 15px ;
+        
+        
+        
+        &._icons {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+
+            .item {
+                flex: 0 1 auto;
+                position: relative;
+                align-items: center;
+                background-color: rgb(170, 170, 136);
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+
+                .icon {
+                    position: absolute;
+                    top: 10px;
+                    left: 15px;
+                    font-size: 28px;
+                    cursor: pointer; 
+                }
+
+                .title{
+                    
+                }
+            } 
+
+        } */

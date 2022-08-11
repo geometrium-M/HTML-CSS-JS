@@ -27,22 +27,23 @@ function toggleMobileMenu() {
 
 
   async function getResponse() {
-    let response = await fetch('http://localhost:3445/users')
+    let response = await fetch('http://localhost:3000/icons')
     let content = await response.json()
-    let res = await content.sort((a,b ) => { return b.timestamp - a.timestamp})
-   console.log(res)
+    
 
     
 
-    let list = document.querySelector('.posts')
+    let list = document.querySelector('._icons')
     
     for(let key in content) {
         
         list.innerHTML += `
-        <li class="post">
-        <div>${content[key].id}</div>
-        <div>${content[key].name}</div>
-        <div>${content[key].location}</div>
+        
+        <li class="item">
+            <a href="">
+                <img src="${content[key].logo}" alt="" class="icon">
+            </a>
+            <div class="title">${content[key].name}</div>
         </li>`
     }  
 }
