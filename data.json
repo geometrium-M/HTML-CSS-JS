@@ -54,53 +54,53 @@
         "logo": "img/logo1.jpg",
         "name": "FreshFood",
         "price": "15$-150$",
-        "date": "new Date('2020-09-28')"
+        "date":"new Date('2022-09-28')"
         
     }, {
         "logo": "img/logo2.jpg",
         "name": "FarmerGoods",
         "price": "10$-120$",
-        "date": "new Date('2014-09-09')"
+        "date": "new Date('2017-09-28')"
     },{
         "logo": "img/logo3.jpg",
         "name": "Delicious",
         "price": "25$-250$",
-        "date": "new Date('2004-09-28')"
+        "date": "new Date('2014-09-28')"
         
     },{
         "logo": "img/logo4.jpg",
         "name": "HealthyFood",
         "price": "13$-110$",
-        "date": "new Date('2022-09-08')"
+        "date":"new Date('2002-09-28')"
         
     },{
         "logo": "img/logo5.jpg",
         "name": "MealTime",
         "price": "11$-300$",
-        "date": "new Date('2017-09-08')"
+        "date": "new Date('2021-09-28')"
         
     },{
         "logo": "img/logo6.jpg",
         "name": "BurgerR",
         "price": "5$-100$",
-        "date": "new Date('2019-03-28')"
+        "date": "new Date('2019-09-28')"
         
     },{
         "logo": "img/logo8.jpg",
         "name": "Polo Bar",
         "price": "15$-450$",
-        "date": "new Date('2013-01-28')"
+        "date": "new Date('2018-09-28')"
         
     },{
         "logo": "img/logo9.jpg",
         "name": "ChinaW",
         "price": "3$-90$",
-        "date": "new Date('2020-09-18')"
+        "date": "new Date('2000-09-28')"
         
     },{
         "logo": "img/logo10.jpg",
         "name": "Chief Bar",
         "price": "15$-150$",
-        "date": "new Date('2018-09-04')"   
+        "date": "new Date('2003-09-28')"  
     }]
 }

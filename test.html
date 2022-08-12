@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="swiper.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -20,14 +19,14 @@
                             <nav class="menu__body">
                                 <ul class="menu__list">
                                     <li class="menu__item">
-                                        <a href="" class="menu__link"> RESTAURANTS </a>
+                                        <a href="#" class="menu__link"> RESTAURANTS </a>
                                         <button type="button" class="menu__arrow fa-solid fa-chevron-down"></button>
                                         <ul class="menu__sub-list">
                                             <li class="menu__sub-item">
-                                                <a href="" class="menu__sub-link">R1</a>
+                                                <a href="#/first/" data-href="#/first/" class="menu__sub-link" id="first" onclick="locationRouter(this.dataset.href)">First</a>
                                             </li>
                                             <li class="menu__sub-item">
-                                                <a href="" class="menu__sub-link">R2</a>
+                                                <a href="#/second/" data-href="#/second/" class="menu__sub-link" id="first" onclick="locationRouter(this.dataset.href)">Second</a>
                                             </li class="menu__sub-item">
                                             <li>
                                                 <a href="" class="menu__sub-link">R3</a>
@@ -88,6 +87,7 @@
 
     </header>
 
+<main id="app">
     <section >
         <div class="banner"></div>
     </section>
@@ -117,14 +117,23 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
+   
+    <section>
+        <h1>THIS IS SECTION OF CHANGE</h1>
+    </section>
+    <button id="btn">click
+        <a href="#/first/" data-href="#/first/" class="menu__sub-link" id="first" onclick="locationRouter(this.dataset.href)">First</a>
+    </button>
 
+</main>
+    
    
 
   
 
 
-    <script src="swiper-bundle.min.js"></script>
-    <script src="index.js"></script>
+    
+    <script  src="index.js"></script>
 
 
 </body>

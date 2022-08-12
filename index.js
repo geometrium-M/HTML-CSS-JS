@@ -1,4 +1,8 @@
-const { default: Swiper } = require("swiper");
+
+
+
+
+
 
 window.onload = function () {
     document.addEventListener("click", OpenMenu);
@@ -52,11 +56,14 @@ getIcons()
 async function getItems() {
     let response = await fetch('http://localhost:3000/items')
     let content = await response.json()
-    let result = await content.sort((item1, item2) => item2.date -item1.date).slice(0,5);
+    let result = await content.sort((a,b) => a.date - b.date)
+    
     console.log(result)
     
 
     let list = document.querySelector('.container')
+    
+    
 
     for(let key in result) {
         
@@ -69,12 +76,119 @@ async function getItems() {
                     <div>${content[key].name}</div>
                     <div>${content[key].price}</div>
         </article>`
+
+        
     }  
+
+
 }
+
 getItems()
 
 
-const swiper = new Swiper
+
+
+
+
+/*document.querySelector('#first').addEventListener('click', get);
+async function get() {
+    let response = await fetch('http://localhost:3000/items')
+    let content = await response.json()
+    let result = content.slice(0,1);
+   
+    
+    
+    
+
+    for(let key in result) {
+        
+        app.innerHTML = `
+        
+        <article class="item">
+                    <a href="">
+                        <img src="${content[key].logo}" alt="" class="item-logo">
+                    </a>
+                    <div>${content[key].name}</div>
+                    <div>${content[key].price}</div>
+        </article>`
+
+        
+    }  
+
+
+}*/
+
+let app = document.querySelector('#app');
+
+const locationRouter = (location) => {
+    switch (location) { 
+        case "#/first/": 
+        async function get() {
+            let response = await fetch('http://localhost:3000/items')
+            let content = await response.json()
+            let result = content[0]
+            console.log(result)
+            
+            for(let key in result) {
+                app.innerHTML = `
+                <article class="item">
+                            <a href="">
+                                <img src="${result.logo}" alt="" class="item-logo">
+                            </a>
+                            <div>${result.name}</div>
+                            <div>${result.price}</div>
+                </article>`    
+            }    
+        }
+        get()
+
+        break; 
+        
+        case "#/second/": 
+        async function get1() {
+            let response = await fetch('http://localhost:3000/items')
+            let content = await response.json()
+            let result = content[1]
+            console.log(result)
+            
+            for(let key in result) {
+                app.innerHTML = `
+                <article class="item">
+                            <a href="">
+                                <img src="${result.logo}" alt="" class="item-logo">
+                            </a>
+                            <div>${result.name}</div>
+                            <div>${result.price}</div>
+                </article>`    
+            }    
+        }
+        get1()
+        
+        break;
+    }
+}
+
+window.addEventListener('load', () =>{
+    const location = window.location.hash
+    
+    if(location) {
+        locationRouter(location)
+    }
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
