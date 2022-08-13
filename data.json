@@ -31,7 +31,8 @@
         "image": "img/icon8.png",
         "title": "Fruits"
         
-    },{
+    },
+    {
         "image": "img/icon9.png",
         "title": "Cakes"
         
@@ -54,53 +55,106 @@
         "logo": "img/logo1.jpg",
         "name": "FreshFood",
         "price": "15$-150$",
-        "date":"new Date('2022-09-28')"
+        "date": "2018"
         
     }, {
         "logo": "img/logo2.jpg",
         "name": "FarmerGoods",
         "price": "10$-120$",
-        "date": "new Date('2017-09-28')"
+        "date": "2013"
     },{
         "logo": "img/logo3.jpg",
         "name": "Delicious",
         "price": "25$-250$",
-        "date": "new Date('2014-09-28')"
+        "date": "2012"
         
     },{
         "logo": "img/logo4.jpg",
         "name": "HealthyFood",
         "price": "13$-110$",
-        "date":"new Date('2002-09-28')"
+        "date": "2022"
         
     },{
         "logo": "img/logo5.jpg",
         "name": "MealTime",
         "price": "11$-300$",
-        "date": "new Date('2021-09-28')"
+        "date": "2001"
         
     },{
         "logo": "img/logo6.jpg",
         "name": "BurgerR",
         "price": "5$-100$",
-        "date": "new Date('2019-09-28')"
+        "date": "2004"
         
     },{
         "logo": "img/logo8.jpg",
         "name": "Polo Bar",
         "price": "15$-450$",
-        "date": "new Date('2018-09-28')"
+        "date": "2014"
         
     },{
         "logo": "img/logo9.jpg",
         "name": "ChinaW",
         "price": "3$-90$",
-        "date": "new Date('2000-09-28')"
+        "date": "2015"
         
     },{
         "logo": "img/logo10.jpg",
         "name": "Chief Bar",
         "price": "15$-150$",
-        "date": "new Date('2003-09-28')"  
+        "date": "2000" 
+    }],
+
+    "categories": [{
+        "img": "img/hot.jpg",
+        "type": "Hot"    
+    },{
+        "img": "img/sides.jpg",
+        "type": "Sides"
+    },{
+        "img": "img/drinks.jpg",
+        "type": "Drinks"    
+    }],
+
+    "typesHot": [{
+        "img": "img/hot1.jpg",
+        "title": "FirstHot",
+        "price": "5$"    
+    },{
+        "img": "img/hot2.jpg",
+        "title": "SecondHot",
+        "price": "8$"
+    },{
+        "img": "img/hot3.jpg",
+        "title": "THirdHot",
+        "price": "7$"   
+    }],
+
+    "typesSides": [{
+        "img": "img/sides1.jpg",
+        "title": "FirstSides",
+        "price": "5$"    
+    },{
+        "img": "img/sides2.jpg",
+        "title": "SecondSides",
+        "price": "8$"
+    },{
+        "img": "img/sides3.jpg",
+        "title": "THirdSides",
+        "price": "7$"   
+    }],
+
+    "typesDrinks": [{
+        "img": "img/drinks1.jpg",
+        "title": "FirstDrink",
+        "price": "5$"    
+    },{
+        "img": "img/drinks2.jpg",
+        "title": "SecondDrink",
+        "price": "8$"
+    },{
+        "img": "img/drinks3.jpg",
+        "title": "THirdDrink",
+        "price": "7$"   
     }]
 }
