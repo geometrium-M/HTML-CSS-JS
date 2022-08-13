@@ -1,5 +1,3 @@
-const { default: Swiper } = require("swiper");
-
 window.onload = function () {
     document.addEventListener("click", OpenMenu);
 
@@ -27,23 +25,32 @@ function toggleMobileMenu() {
 }
 
 
-async function getIcons() {
+function leftScroll() {
+    const left = document.querySelector(".scroll-images");
+    left.scrollBy(200, 0);
+  }
+  function rightScroll() {
+    const right = document.querySelector(".scroll-images");
+    right.scrollBy(-200, 0);
+  }
+
+  async function getIcons() {
     let response = await fetch('http://localhost:3000/icons')
     let content = await response.json()
     console.log(content)
     
 
-    let list = document.querySelector('._icons')
+    let list = document.querySelector('.icons__container')
 
     for(let key in content) {
         
         list.innerHTML += `
         
-        <li class="item swiper-slide">
+        <li class="icon__item">
             <a href="">
-                <img src="${content[key].image}" alt="" class="icon">
+                <img src="${content[key].image}" alt="" class="icon__image">
             </a>
-            <div class="title">${content[key].title}</div>
+            <div class="icon__title">${content[key].title}</div>
         </li>`
     }  
 }
@@ -52,11 +59,14 @@ getIcons()
 async function getItems() {
     let response = await fetch('http://localhost:3000/items')
     let content = await response.json()
-    let result = await content.sort((item1, item2) => item2.date -item1.date).slice(0,5);
+    let result = await content.sort((item1,item2) => item2.date - item1.date).slice(0,5)
+    
     console.log(result)
     
 
     let list = document.querySelector('.container')
+    
+    
 
     for(let key in result) {
         
@@ -64,17 +74,34 @@ async function getItems() {
         
         <article class="item">
                     <a href="">
-                        <img src="${content[key].logo}" alt="" class="item-logo">
+                        <img src="${content[key].logo}" alt="image" class="item-logo">
                     </a>
-                    <div>${content[key].name}</div>
-                    <div>${content[key].price}</div>
+                    <div class="item-name">${content[key].name}</div>
+                    <div class="item-price">${content[key].price}</div>
         </article>`
+  
     }  
+
+
 }
+
 getItems()
 
 
-const swiper = new Swiper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="swiper.min.css">
+    
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -20,17 +20,17 @@
                             <nav class="menu__body">
                                 <ul class="menu__list">
                                     <li class="menu__item">
-                                        <a href="" class="menu__link"> RESTAURANTS </a>
+                                        <a href="#" class="menu__link"> RESTAURANTS </a>
                                         <button type="button" class="menu__arrow fa-solid fa-chevron-down"></button>
                                         <ul class="menu__sub-list">
                                             <li class="menu__sub-item">
-                                                <a href="" class="menu__sub-link">R1</a>
+                                                <a href="#/first/" data-href="#/first/" class="menu__sub-link" id="first" onclick="locationRouter(this.dataset.href)">FreshFood</a>
                                             </li>
                                             <li class="menu__sub-item">
-                                                <a href="" class="menu__sub-link">R2</a>
+                                                <a href="#/second/" data-href="#/second/" class="menu__sub-link" id="second" onclick="locationRouter(this.dataset.href)">FarmerGoods</a>
                                             </li class="menu__sub-item">
                                             <li>
-                                                <a href="" class="menu__sub-link">R3</a>
+                                                <a href="#/third/" data-href="#/third/" class="menu__sub-link" id="third" onclick="locationRouter(this.dataset.href)">Delicious</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -39,13 +39,13 @@
                                         <button type="button" class="menu__arrow fa-solid fa-chevron-down"></button>
                                         <ul class="menu__sub-list">
                                             <li class="menu__sub-item">
-                                                <a href="" class="menu__sub-link">R1</a>
+                                                <a href="#/firstMenu/" data-href="#/firstMenu/" class="menu__sub-link" onclick="locationRouterMenu(this.dataset.href)">Hot</a>
                                             </li>
                                             <li class="menu__sub-item">
-                                                <a href="" class="menu__sub-link">R2</a>
+                                                <a href="#/secondMenu/" data-href="#/secondMenu/" class="menu__sub-link" onclick="locationRouterMenu(this.dataset.href)">Sides</a>
                                             </li>
                                             <li class="menu__sub-item">
-                                                <a href="" class="menu__sub-link">R3</a>
+                                                <a href="#/thirdMenu/" data-href="#/thirdMenu/" class="menu__sub-link" onclick="locationRouterMenu(this.dataset.href)">Drinks</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -62,7 +62,7 @@
                             <button type="button" class="search-form__icon fa-solid fa-magnifying-glass"></button>
                             <form action="#" class="search-form__item">
                                 <button type="submit" class="search-form__btn fa-solid fa-magnifying-glass"></button>
-                                <input type="text" name="form[]" class="search-form__input">
+                                <input type="text" name="form[]" class="search-form__input" placeholder="search there">
                             </form>
                         </div>
                     </div>
@@ -73,7 +73,10 @@
                                 <ul class="cart-header__list cart-list"></ul>
                             </div>
                         </div>
-                        <div class="actions-header__item actions-header__item_user _ibg fa-solid fa-user"></div>
+                        <div>
+                            <a href="#" class="actions-header__item user-header _ibg fa-solid fa-user"></a>
+                        </div>
+                        
                     </div>
 
                     <button type="button" class="menu__icon icon-menu" onclick="toggleMobileMenu()"> 
@@ -88,43 +91,43 @@
 
     </header>
 
-    <section >
-        <div class="banner"></div>
+<main class="app">
+
+    
+
+    <section class="banner">
+        <img src="img/banner.jpg" alt="">
+        
     </section>
 
-    <section class="categories swiper">
-        <div class="categories__wrapper">
-            <ul class="categories__wrapper _icons swiper-wrapper">                
-            </ul>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
+
+
+    <section class="icons">
+        <div class="icons__wrapeer">
+            <ul class="icons__container"></ul>
         </div>
     </section>
 
 
+    <section class="restaurants">
+        <h2 class="title"> New restaurants</h2>
+        <div class="wrapper">
+            <div class="container"></div>
+        </div>
+    </section>
+   
    
 
-
-    <section class="new__items">
-        <div class="new__items _wrapper">
-            <h2 class="new__items _title"> New restaurants</h2>
-            <div class="container swiper-wrapper">
-
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
+</main>
+    
    
 
   
+    
 
-
-    <script src="swiper-bundle.min.js"></script>
-    <script src="index.js"></script>
+    <script src="menuClick.js"></script>
+    <script src="restaurantsClick.js"></script>
+    <script  src="index.js"></script>
 
 
 </body>
